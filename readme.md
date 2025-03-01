@@ -11,4 +11,7 @@ in
 nin
 exists
 or size
-regex
+regex:
+starts with = ^
+ends with = $
+in middle n number of letters = .\*
