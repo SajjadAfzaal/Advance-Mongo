@@ -1,0 +1,140 @@
+const express = require("express");
+const userModel = require("./models/user");
+const app = express();
+
+const users = [
+  {
+    username: "john_doe",
+    name: "John Doe",
+    age: "28",
+    password: "password123",
+    email: "johndoe@example.com",
+    isMarried: false,
+  },
+  {
+    username: "jane_smith",
+    name: "Jane Smith",
+    age: "32",
+    password: "securepass",
+    email: "janesmith@example.com",
+    isMarried: true,
+  },
+  {
+    username: "michael_lee",
+    name: "Michael Lee",
+    age: "24",
+    password: "mikelee24",
+    email: "michaellee@example.com",
+    isMarried: false,
+  },
+  {
+    username: "sarah_jones",
+    name: "Sarah Jones",
+    age: "29",
+    password: "sjonespass",
+    email: "sarahjones@example.com",
+    isMarried: true,
+  },
+  {
+    username: "david_wilson",
+    name: "David Wilson",
+    age: "35",
+    password: "davidw123",
+    email: "davidwilson@example.com",
+    isMarried: true,
+  },
+  {
+    username: "linda_brown",
+    name: "Linda Brown",
+    age: "27",
+    password: "linda_brown",
+    email: "lindabrown@example.com",
+    isMarried: false,
+  },
+  {
+    username: "robert_miller",
+    name: "Robert Miller",
+    age: "40",
+    password: "robmiller40",
+    email: "robertmiller@example.com",
+    isMarried: true,
+  },
+  {
+    username: "emily_davis",
+    name: "Emily Davis",
+    age: "22",
+    password: "emilyd22",
+    email: "emilydavis@example.com",
+    isMarried: false,
+  },
+  {
+    username: "william_white",
+    name: "William White",
+    age: "31",
+    password: "williamw",
+    email: "williamwhite@example.com",
+    isMarried: true,
+  },
+  {
+    username: "olivia_moore",
+    name: "Olivia Moore",
+    age: "26",
+    password: "oliviamoore",
+    email: "oliviamoore@example.com",
+    isMarried: false,
+  },
+  {
+    username: "james_taylor",
+    name: "James Taylor",
+    age: "33",
+    password: "jamest33",
+    email: "jamestaylor@example.com",
+    isMarried: true,
+  },
+  {
+    username: "sophia_clark",
+    name: "Sophia Clark",
+    age: "30",
+    password: "sophiaclark",
+    email: "sophiaclark@example.com",
+    isMarried: true,
+  },
+  {
+    username: "daniel_harris",
+    name: "Daniel Harris",
+    age: "25",
+    password: "danielh",
+    email: "danielharris@example.com",
+    isMarried: false,
+  },
+  {
+    username: "ava_martin",
+    name: "Ava Martin",
+    age: "23",
+    password: "avamartin23",
+    email: "avamartin@example.com",
+    isMarried: false,
+  },
+  {
+    username: "ethan_thomas",
+    name: "Ethan Thomas",
+    age: "34",
+    password: "ethanthomas",
+    email: "ethanthomas@example.com",
+    isMarried: true,
+  },
+];
+
+//   module.exports = users;
+
+app.get("/", function (req, res) {
+  res.send("working");
+});
+
+app.get("/createMany", async function (req, res) {
+  let data = await userModel.insertMany(users);
+
+  res.send(data);
+});
+
+app.listen(3000);

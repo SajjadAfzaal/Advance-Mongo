@@ -1,0 +1,24 @@
+{
+  "name": "advance-mongo",
+  "version": "1.0.0",
+  "description": "inserting many all at once\r eq\r ne\r lt\r lte\r gt\r gte\r in\r nin\r exists\r or size\r regex",
+  "homepage": "https://github.com/SajjadAfzaal/Advance-Mongo#readme",
+  "bugs": {
+    "url": "https://github.com/SajjadAfzaal/Advance-Mongo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SajjadAfzaal/Advance-Mongo.git"
+  },
+  "license": "ISC",
+  "author": "Sajjad Afzaal",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.11.0"
+  }
+}
